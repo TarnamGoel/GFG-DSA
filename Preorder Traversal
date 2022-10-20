@@ -1,0 +1,12 @@
+def preorder(root):
+    if not root:
+        return
+    element=[]
+    
+    element.append(root.data)
+    
+    if root.left:
+        element+=preorder(root.left)
+    if root.right:
+        element+=preorder(root.right)
+    return element
