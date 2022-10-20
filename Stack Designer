@@ -1,0 +1,12 @@
+def _push(arr):
+    #return a stack with all elements of arr inserted in it
+    stack=[]
+    for i in arr:
+        stack.append(i)
+    return stack
+    
+
+#_pop function to print elements of the stack remove as well
+def _pop(stack):
+    while len(arr)!=0:
+        print(arr.pop(),end=' ')
