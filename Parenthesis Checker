@@ -1,0 +1,27 @@
+#User function Template for python3
+
+class Solution:
+    
+    #Function to check if brackets are balanced or not.
+    def ispar(self,x):
+        # code here
+        s=[]
+        for char in x:
+            if char in '{([':
+                s.append(char)
+            elif char=='}':
+                if len(s)==0 or s[-1]!='{':
+                    return False
+                s.pop()
+            elif char==')':
+                if len(s)==0 or s[-1]!='(':
+                    return False
+                s.pop()
+            elif char==']':
+                if len(s)==0 or s[-1]!='[':
+                    return False
+                s.pop()
+        if not s:
+            return True
+        return False
+            
