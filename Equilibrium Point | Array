@@ -1,0 +1,15 @@
+class Solution:
+    # Complete this function
+    
+    #Function to find equilibrium point in the array.
+    def equilibriumPoint(self,A, N):
+        l=[]
+        if N==1:
+            return 1
+        sum1,sum2=0,sum(A)
+        for i in range(N):
+            sum2-=A[i]
+            if sum1==sum2:
+                return i+1
+            sum1+=A[i]
+        return -1
