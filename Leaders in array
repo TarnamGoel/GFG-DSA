@@ -1,0 +1,11 @@
+class Solution:
+    #Back-end complete function Template for Python 3
+    
+    #Function to find the leaders in the array.
+    def leaders(self, A, N):
+        l=[]
+        for i in range(N):
+            while l and l[-1]<A[i]:
+                l.pop()
+            l.append(A[i])
+        return l
