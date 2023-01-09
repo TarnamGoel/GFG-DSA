@@ -1,0 +1,8 @@
+#Question Link: https://practice.geeksforgeeks.org/problems/print-linked-list-elements/1?page=1&difficulty[]=-1&category[]=Linked%20List&sortBy=submissions
+
+class Solution:
+    def display(self,node):
+        curr=node
+        while curr is not None:
+            print(curr.data,end=" ")
+            curr=curr.next
