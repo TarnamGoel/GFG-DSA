@@ -1,0 +1,12 @@
+#Question Link: https://practice.geeksforgeeks.org/problems/circular-linked-list/1?page=1&difficulty[]=-1&category[]=Linked%20List&sortBy=submissions
+
+def isCircular(head):
+    # Code here
+    first_element = head
+    next_element = head.next
+    
+    while next_element is not None:
+        if next_element.next == first_element:
+            return True
+        next_element = next_element.next
+    return False
